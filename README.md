@@ -1,4 +1,4 @@
-# selfdrive_software_2025
+# Self Drive Software 2025
 
 Software for our 2025 [Intelligent Ground Vehicle Competition](http://www.igvc.org) Self Drive challenge entry. We are using [ROS2 Jazzy](https://docs.ros.org/en/jazzy/index.html) on [Ubuntu 24.04](https://releases.ubuntu.com/24.04).
 
