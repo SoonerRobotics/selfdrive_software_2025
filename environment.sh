@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-if [ -d "~/scr/sdenv/" ]; then
+if [ -d "$HOME/scr/sdenv/" ]; then
 	echo "Activating existing environment"
 else
 	echo "Creating new environment"
@@ -10,6 +10,7 @@ fi
 
 activate() {
 	. $HOME/scr/sdenv/bin/activate
+	. /opt/ros/jazzy/setup.sh
 }
 
 activate
