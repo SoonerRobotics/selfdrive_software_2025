@@ -1,1 +1,2 @@
-# This will eventually do some stuff
+# Install colcon
+sudo apt install python3-colcon-common-extensions
