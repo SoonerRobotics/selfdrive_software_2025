@@ -4,7 +4,7 @@ Software for our 2025 [Intelligent Ground Vehicle Competition](http://www.igvc.o
 
 ## Installation
 
-If you are installing ROS2 Jazzy for the first time, ensure you are on Ubuntu 24.04 and run the followind command.
+If you are installing ROS2 Jazzy for the first time, ensure you are on Ubuntu 24.04 and run the following command.
 ```
 wget https://files.dylanzeml.in/ros/jazzy/install.sh
 chmod +x install.sh
