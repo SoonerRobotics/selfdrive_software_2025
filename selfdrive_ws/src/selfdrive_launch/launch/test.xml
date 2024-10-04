@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="selfdrive_shared" exec="synchronizer" output="screen" emulate_tty="true" />
+    <node pkg="selfdrive_example_py" exec="example.py" output="screen" emulate_tty="true" />
+    <node pkg="selfdrive_example_cpp" exec="selfdrive_example_cpp" output="screen" emulate_tty="true" />
+
+    <include file="$(find-pkg-share rosbridge_server)/launch/rosbridge_websocket_launch.xml">
+        <arg name="bson_only_mode" value="true" />
+    </include>
+</launch>
