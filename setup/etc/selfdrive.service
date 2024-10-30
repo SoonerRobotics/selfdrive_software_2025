@@ -1,0 +1,14 @@
+[Unit]
+Description=Selfdrive 2025 Service
+
+[Service]
+Type=simple
+User=scr
+Restart=always
+RestartSec=5s
+Environment="DISPLAY=:0"
+Environment="XAUTHORITY=/home/scr/.Xauthority"
+ExecStart=/bin/bash /usr/bin/selfdrive_service.sh
+
+[Install]
+WantedBy=multi-user.target
