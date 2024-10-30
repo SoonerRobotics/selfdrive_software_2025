@@ -1,3 +1,4 @@
 <launch>
+    <include file="$(find-pkg-share rosbridge_server)/launch/rosbridge_websocket_launch.xml" />
     <node pkg="selfdrive_display" exec="backend.py" output="screen" emulate_tty="true" />
 </launch>
