@@ -1,7 +1,9 @@
 "use client";
 
+import IdleScreen from "@/components/IdleScreen";
 import { socket } from "@/lib/socket"; 
 import { useEffect, useRef } from "react";
+import { toast } from "react-toastify";
 
 export default function Home() {
     const motorFeedbackRef = useRef<HTMLDivElement>(null);
@@ -31,6 +33,11 @@ export default function Home() {
             socket.off('motor_feedback', onMessage);
         }
     }, []);
+
+    if (!socket.connected)
+    {
+        return <IdleScreen />
+    }
 
     return (
         <div>
