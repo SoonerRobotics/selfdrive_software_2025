@@ -2,19 +2,24 @@
 
 import IdleScreen from "@/components/IdleScreen";
 import { socket } from "@/lib/socket"; 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { toast } from "react-toastify";
 
 export default function Home() {
     const motorFeedbackRef = useRef<HTMLDivElement>(null);
+    const [render, setRender] = useState(false);
 
     useEffect(() => {
         function onConnect() {
             console.log('connected');
+
+            setRender(!render);
         }
 
         function onDisconnect() {
             console.log('disconnected');
+
+            setRender(!render);
         }
 
         function onMessage(data: any) {
